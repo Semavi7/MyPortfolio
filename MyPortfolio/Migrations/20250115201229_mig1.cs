@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MyPortfolyo.Migrations
+namespace MyPortfolio.Migrations
 {
     public partial class mig1 : Migration
     {
@@ -15,7 +15,7 @@ namespace MyPortfolyo.Migrations
                 {
                     AboutId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(200)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SubDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Details = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

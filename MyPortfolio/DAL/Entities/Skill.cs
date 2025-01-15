@@ -1,4 +1,4 @@
-﻿namespace MyPortfolyo.DAL.Entities
+﻿namespace MyPortfolio.DAL.Entities
 {
     public class Skill
     {

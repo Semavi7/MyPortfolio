@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MyPortfolyo.DAL.Context;
+using MyPortfolio.DAL.Context;
 
 #nullable disable
 
-namespace MyPortfolyo.Migrations
+namespace MyPortfolio.Migrations
 {
     [DbContext(typeof(MyPrtfolioContext))]
-    [Migration("20250113193144_mig1")]
+    [Migration("20250115201229_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace MyPortfolyo.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.About", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.About", b =>
                 {
                     b.Property<int>("AboutId")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("Abouts");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.Contact", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.Contact", b =>
                 {
                     b.Property<int>("ContactId")
                         .ValueGeneratedOnAdd()
@@ -86,7 +86,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.Esperience", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.Esperience", b =>
                 {
                     b.Property<int>("EsperienceId")
                         .ValueGeneratedOnAdd()
@@ -115,7 +115,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("Esperiences");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.Feture", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.Feture", b =>
                 {
                     b.Property<int>("FetureId")
                         .ValueGeneratedOnAdd()
@@ -136,7 +136,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("Fetures");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.Message", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.Message", b =>
                 {
                     b.Property<int>("MessageId")
                         .ValueGeneratedOnAdd()
@@ -171,7 +171,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.Portfolio", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.Portfolio", b =>
                 {
                     b.Property<int>("PortfolioId")
                         .ValueGeneratedOnAdd()
@@ -204,7 +204,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("Portfolios");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.Skill", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.Skill", b =>
                 {
                     b.Property<int>("SkillId")
                         .ValueGeneratedOnAdd()
@@ -225,7 +225,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("Skills");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.SocialMedia", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.SocialMedia", b =>
                 {
                     b.Property<int>("SocialMediaId")
                         .ValueGeneratedOnAdd()
@@ -250,7 +250,7 @@ namespace MyPortfolyo.Migrations
                     b.ToTable("SocialMedias");
                 });
 
-            modelBuilder.Entity("MyPortfolyo.DAL.Entities.Testimonial", b =>
+            modelBuilder.Entity("MyPortfolio.DAL.Entities.Testimonial", b =>
                 {
                     b.Property<int>("TestimonialId")
                         .ValueGeneratedOnAdd()

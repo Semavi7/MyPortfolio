@@ -3,8 +3,8 @@
     <div class="row narrow section-intro has-bottom-sep">
         <div class="col-full text-center">
             <h3>Hakkımda</h3>
-            <h1>Ben Kimim</h1>
-            <p class="lead">C# ve ASP.NET Core teknolojilerinde uzmanlaşan bir yazılımcıyım. Analitik düşünme ve muhasebe geçmişimle veri odaklı çözümler geliştiriyor, kullanıcı deneyimi ve kaliteli yazılımlar üretmeye odaklanıyorum.</p>
+            <h1>@ViewBag.aboutTitle</h1>
+            <p class="lead">@ViewBag.aboutSubDescription</p>
         </div>
     </div>
 
@@ -13,11 +13,7 @@
         <div class="col-six tab-full left">
             <h3>Merhaba!</h3>
 
-            <p>C# ve ASP.NET Core teknolojilerinde uzmanlaşan bir yazılımcıyım. Analitik düşünme becerimle veri odaklı çözümler üretiyor, kullanıcı deneyimini önceliklendiren kaliteli yazılımlar geliştirmeye odaklanıyorum.</p>
-
-            <p>
-                C# ve ASP.NET Core teknolojilerinde uzmanlaşma yolunda kendimi sürekli geliştiren bir yazılım geliştiricisiyim. Yazılım alanındaki eğitimlerim, analitik düşünme yeteneğim ve muhasebe geçmişim, özellikle finansal süreçlerde etkili yazılım çözümleri sunmamı sağlıyor. Veri odaklı yaklaşımla projeler geliştirerek, hem teknik açıdan güçlü hem de kullanıcı dostu uygulamalar üretiyorum. Müşteri memnuniyeti ve kullanıcı deneyimi benim için öncelikli değerler arasında. Teknolojiye olan tutkum ve öğrenmeye açık yapım sayesinde, yazılım geliştirme dünyasında yenilikçi projeler üretmek ve sürekli kendimi geliştirmek temel hedeflerim arasında yer alıyor. Profesyonel geçmişimden kazandığım deneyimle yazılım projelerine yaratıcı çözümler sunuyorum.
-            </p>
+            <p>@Html.Raw(ViewBag.aboutDetail.Replace("  ", "<p>"))</p>
         </div>
 
         @await Component.InvokeAsync("_SkillComponentPartial")

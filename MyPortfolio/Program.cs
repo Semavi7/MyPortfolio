@@ -1,4 +1,4 @@
-namespace MyPortfolyo
+namespace MyPortfolio
 {
     public class Program
     {

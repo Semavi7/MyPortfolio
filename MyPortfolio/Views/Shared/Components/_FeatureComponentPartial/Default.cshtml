@@ -1,56 +1,58 @@
-﻿<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="https://i.hizliresim.com/yb7sy96.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+﻿@model List<MyPortfolio.DAL.Entities.Feture>
 
-    <div class="overlay"></div>
-    <div class="shadow-overlay"></div>
+<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="https://i.hizliresim.com/yb7sy96.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-    <div class="home-content">
+	<div class="overlay"></div>
+	<div class="shadow-overlay"></div>
 
-        <div class="row home-content__main">
+	@foreach (var item in Model)
+	{
+		<div class="home-content">
 
-            <h3>Merhaba</h3>
+			<div class="row home-content__main">
 
-            <h1>
-                Ben Mehmet Burçhan Gürses <br>
-                Asp.Net Core İle  <br>
-                Web ve Masaüstü Uygulamaları Geliştiriyorum
-            </h1>
+				<h3>@item.Title</h3>
 
-            <div class="home-content__buttons">
-                <a href="#works" class="smoothscroll btn btn--stroke">
-                    Son Projelerim
-                </a>
-                <a href="#about" class="smoothscroll btn btn--stroke">
-                    Hakkımda 
-                </a>
-            </div>
+				<h1>@Html.Raw(item.Desription.Replace("  ", "<br>"))</h1>
 
-            <div class="home-content__scroll">
-                <a href="#about" class="scroll-link smoothscroll">
-                    <span>Aşşağı İn</span>
-                </a>
-            </div>
+				<div class="home-content__buttons">
+					<a href="#works" class="smoothscroll btn btn--stroke">
+						Son Projelerim
+					</a>
+					<a href="#about" class="smoothscroll btn btn--stroke">
+						Hakkımda
+					</a>
+				</div>
 
-        </div>
+				<div class="home-content__scroll">
+					<a href="#about" class="scroll-link smoothscroll">
+						<span>Aşşağı İn</span>
+					</a>
+				</div>
 
-    </div> <!-- end home-content -->
+			</div>
 
-    <ul class="home-social">
-        <li>
-            <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-        </li>
-        <li>
-            <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-        </li>
-        <li>
-            <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-        </li>
-        <li>
-            <a href="#"><i class="im im-behance" aria-hidden="true"></i><span>Behance</span></a>
-        </li>
-        <li>
-            <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
-        </li>
-    </ul>
-    <!-- end home-social -->
+		</div> 
+	}
+
+
+	<ul class="home-social">
+		<li>
+			<a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+		</li>
+		<li>
+			<a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+		</li>
+		<li>
+			<a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+		</li>
+		<li>
+			<a href="#"><i class="im im-behance" aria-hidden="true"></i><span>Behance</span></a>
+		</li>
+		<li>
+			<a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
+		</li>
+	</ul>
+	<!-- end home-social -->
 
 </section> <!-- end s-home -->
